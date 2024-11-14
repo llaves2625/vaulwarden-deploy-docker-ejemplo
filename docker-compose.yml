@@ -1,0 +1,11 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaulwarden
+    ports:
+     - "80:80"
+    restart: always
+    env_file:
+     - ./vaultwarden.env
+    volumes:
+      - ./vw-data:/data
